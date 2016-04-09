@@ -22,7 +22,7 @@ script:
   - fastlane $FASTLANE_LANE configuration:Release --env $FASTLANE_ENV
 after_success:
   - if [ "$FASTLANE_LANE" == "code_coverage" ]; then
-     make post_coverage
+     make post_coverage;
     fi
 notifications:
   email: false
