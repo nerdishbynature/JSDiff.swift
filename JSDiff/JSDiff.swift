@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 import JavaScriptCore
 
 @objc public class JSLineDiff: NSObject {
@@ -12,10 +12,10 @@ import JavaScriptCore
 }
 
 @objc public class JSDiff: NSObject {
-    let deletedColor: Color
-    let deletedWordColor: Color
-    let addedColor: Color
-    let addedWordColor: Color
+    let deletedColor: UIColor
+    let deletedWordColor: UIColor
+    let addedColor: UIColor
+    let addedWordColor: UIColor
     private lazy var context: JSContext = {
         let context = JSContext()
         if let path = NSBundle(forClass: self.dynamicType).pathForResource("bundle", ofType: "js"), source = try? String(contentsOfFile: path) {
@@ -24,7 +24,7 @@ import JavaScriptCore
         return context
     }()
 
-    public init(deletedColor: Color, deletedWordColor: Color, addedColor: Color, addedWordColor: Color) {
+    public init(deletedColor: UIColor, deletedWordColor: UIColor, addedColor: UIColor, addedWordColor: UIColor) {
         self.deletedColor = deletedColor
         self.deletedWordColor = deletedWordColor
         self.addedColor = addedColor
