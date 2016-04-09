@@ -1,0 +1,14 @@
+*.pbxuser
+*.mode1v3
+*.perspectivev3
+.DS_Store
+.LSOverride
+.idea/
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+*.gcno
+Build/
+bundle.js
+node_modules/
+
