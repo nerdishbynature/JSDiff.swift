@@ -9,7 +9,7 @@ xcuserdata/
 *.xcscmblueprint
 *.gcno
 Build/
-bundle.js
+JSDiff/bundle.js
 node_modules/
 fastlane/README.md
 fastlane/test-output
