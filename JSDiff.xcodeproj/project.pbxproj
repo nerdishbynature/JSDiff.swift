@@ -11,16 +11,16 @@
 		238077361CB94DD100415155 /* JSDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A4A16E1CB93D8A00A3DEE3 /* JSDiff.swift */; };
 		238077381CB94DD100415155 /* JSDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A4A1701CB93DB600A3DEE3 /* JSDiffResult.swift */; };
 		238077391CB94DD700415155 /* JSDiff.h in Headers */ = {isa = PBXBuildFile; fileRef = 23A4A1571CB93D6500A3DEE3 /* JSDiff.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2380773D1CB94DE700415155 /* bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 23A4A1751CB9401B00A3DEE3 /* bundle.js */; };
 		2380773E1CB94DF200415155 /* JSDiffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A4A1631CB93D6500A3DEE3 /* JSDiffTests.swift */; };
 		2380773F1CB94DF200415155 /* JSDiffTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A4A1771CB9452400A3DEE3 /* JSDiffTests.m */; };
 		238077401CB94DF200415155 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A4A1791CB9467600A3DEE3 /* Color.swift */; };
+		238077831CB958CB00415155 /* bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 238077821CB958CB00415155 /* bundle.js */; };
+		238077841CB958CB00415155 /* bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 238077821CB958CB00415155 /* bundle.js */; };
 		23A4A1581CB93D6500A3DEE3 /* JSDiff.h in Headers */ = {isa = PBXBuildFile; fileRef = 23A4A1571CB93D6500A3DEE3 /* JSDiff.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23A4A15F1CB93D6500A3DEE3 /* JSDiff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A4A1541CB93D6500A3DEE3 /* JSDiff.framework */; };
 		23A4A1641CB93D6500A3DEE3 /* JSDiffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A4A1631CB93D6500A3DEE3 /* JSDiffTests.swift */; };
 		23A4A16F1CB93D8A00A3DEE3 /* JSDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A4A16E1CB93D8A00A3DEE3 /* JSDiff.swift */; };
 		23A4A1711CB93DB600A3DEE3 /* JSDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A4A1701CB93DB600A3DEE3 /* JSDiffResult.swift */; };
-		23A4A1761CB9401B00A3DEE3 /* bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 23A4A1751CB9401B00A3DEE3 /* bundle.js */; };
 		23A4A1781CB9452400A3DEE3 /* JSDiffTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A4A1771CB9452400A3DEE3 /* JSDiffTests.m */; };
 		23A4A17A1CB9467600A3DEE3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A4A1791CB9467600A3DEE3 /* Color.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +45,8 @@
 /* Begin PBXFileReference section */
 		2380771F1CB94D9600415155 /* JSDiff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSDiff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		238077281CB94D9700415155 /* JSDiffTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSDiffTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		238077821CB958CB00415155 /* bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bundle.js; sourceTree = "<group>"; };
+		238077861CB958DB00415155 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = SOURCE_ROOT; };
 		23A4A1541CB93D6500A3DEE3 /* JSDiff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JSDiff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A4A1571CB93D6500A3DEE3 /* JSDiff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDiff.h; sourceTree = "<group>"; };
 		23A4A1591CB93D6500A3DEE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,7 +55,6 @@
 		23A4A1651CB93D6500A3DEE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23A4A16E1CB93D8A00A3DEE3 /* JSDiff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSDiff.swift; sourceTree = "<group>"; };
 		23A4A1701CB93DB600A3DEE3 /* JSDiffResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSDiffResult.swift; sourceTree = "<group>"; };
-		23A4A1751CB9401B00A3DEE3 /* bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bundle.js; sourceTree = "<group>"; };
 		23A4A1771CB9452400A3DEE3 /* JSDiffTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDiffTests.m; sourceTree = "<group>"; };
 		23A4A1791CB9467600A3DEE3 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2380777D1CB9583D00415155 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				238077821CB958CB00415155 /* bundle.js */,
+				238077861CB958DB00415155 /* js */,
+			);
+			name = js;
+			sourceTree = "<group>";
+		};
 		23A4A14A1CB93D6500A3DEE3 = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +128,7 @@
 				23A4A1571CB93D6500A3DEE3 /* JSDiff.h */,
 				23A4A16E1CB93D8A00A3DEE3 /* JSDiff.swift */,
 				23A4A1701CB93DB600A3DEE3 /* JSDiffResult.swift */,
-				23A4A1751CB9401B00A3DEE3 /* bundle.js */,
+				2380777D1CB9583D00415155 /* js */,
 				23A4A1591CB93D6500A3DEE3 /* Info.plist */,
 			);
 			path = JSDiff;
@@ -280,7 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2380773D1CB94DE700415155 /* bundle.js in Resources */,
+				238077841CB958CB00415155 /* bundle.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23A4A1761CB9401B00A3DEE3 /* bundle.js in Resources */,
+				238077831CB958CB00415155 /* bundle.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +331,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "browserify js/main.js -o ${SRCROOT}/JSDiff/bundle.js";
+			shellScript = "browserify ${SRCROOT}/js/main.js -o ${SRCROOT}/JSDiff/bundle.js";
 		};
 		23A4A1741CB93FD000A3DEE3 /* browserify */ = {
 			isa = PBXShellScriptBuildPhase;
