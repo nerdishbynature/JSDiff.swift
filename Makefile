@@ -4,7 +4,6 @@ BRANCH=$(shell git name-rev --name-only HEAD)
 install:
 	brew outdated || brew install node
 	npm install -g browserify
-	cd js && npm install
 	gem install slather fastlane
 
 test:

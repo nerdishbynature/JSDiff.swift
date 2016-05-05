@@ -10,7 +10,6 @@ xcuserdata/
 *.gcno
 Build/
 JSDiff/bundle.js
-node_modules/
 fastlane/README.md
 fastlane/test-output
 fastlane/report.xml
