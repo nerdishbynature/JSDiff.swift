@@ -1,9 +1,9 @@
 import UIKit
 import JavaScriptCore
 
-@objc public class JSLineDiff: NSObject {
-    public let newLine: NSAttributedString
-    public let oldLine: NSAttributedString
+@objc open class JSLineDiff: NSObject {
+    open let newLine: NSAttributedString
+    open let oldLine: NSAttributedString
 
     init(oldLine: NSAttributedString, newLine: NSAttributedString) {
         self.oldLine = oldLine
@@ -11,17 +11,17 @@ import JavaScriptCore
     }
 }
 
-@objc public class JSDiff: NSObject {
+@objc open class JSDiff: NSObject {
     let deletedColor: UIColor
     let deletedWordColor: UIColor
     let addedColor: UIColor
     let addedWordColor: UIColor
-    private lazy var context: JSContext = {
+    fileprivate lazy var context: JSContext = {
         let context = JSContext()
-        if let path = NSBundle(forClass: self.dynamicType).pathForResource("bundle", ofType: "js"), source = try? String(contentsOfFile: path) {
-            context.evaluateScript(source)
+        if let path = Bundle(for: type(of: self)).path(forResource: "bundle", ofType: "js"), let source = try? String(contentsOfFile: path) {
+            _ = context?.evaluateScript(source)
         }
-        return context
+        return context!
     }()
 
     public init(deletedColor: UIColor, deletedWordColor: UIColor, addedColor: UIColor, addedWordColor: UIColor) {
@@ -31,12 +31,12 @@ import JavaScriptCore
         self.addedWordColor = addedWordColor
     }
 
-    private func results(oldLine: String, newLine: String) -> [[String: AnyObject]] {
+    fileprivate func results(_ oldLine: String, newLine: String) -> [[String: AnyObject]] {
         let diff = context.objectForKeyedSubscript("swift_diffStrings")
-        return diff.callWithArguments([oldLine, newLine]).toArray() as? [[String: AnyObject]] ?? []
+        return diff!.call(withArguments: [oldLine, newLine]).toArray() as? [[String: AnyObject]] ?? []
     }
 
-    @objc public func diffWords(oldLine: String, newLine: String) -> JSLineDiff {
+    @objc open func diffWords(_ oldLine: String, newLine: String) -> JSLineDiff {
         var oldLineIndex = 0
         var newLineIndex = 0
         let attributedOldLine = NSMutableAttributedString(string: oldLine)

@@ -16,13 +16,13 @@ class JSDiffTests: XCTestCase {
         let jsDiff = JSDiff(deletedColor: UIColor.deletedColor(), deletedWordColor: UIColor.strongDeletedColor(), addedColor: UIColor.addedColor(), addedWordColor: UIColor.strongAddedColor())
 
         let expectedOldLine = NSMutableAttributedString(string: oldLine, attributes: [NSBackgroundColorAttributeName: UIColor.deletedColor()])
-        expectedOldLine.addAttributes([NSBackgroundColorAttributeName: UIColor.strongDeletedColor()], range: (oldLine as NSString).rangeOfString("-you-always"))
-        expectedOldLine.addAttributes([NSBackgroundColorAttributeName: UIColor.strongDeletedColor()], range: (oldLine as NSString).rangeOfString("id963577401"))
+        expectedOldLine.addAttributes([NSBackgroundColorAttributeName: UIColor.strongDeletedColor()], range: (oldLine as NSString).range(of: "-you-always"))
+        expectedOldLine.addAttributes([NSBackgroundColorAttributeName: UIColor.strongDeletedColor()], range: (oldLine as NSString).range(of: "id963577401"))
 
         let expectedNewLine = NSMutableAttributedString(string: newLine, attributes: [NSBackgroundColorAttributeName: UIColor.addedColor()])
-        expectedNewLine.addAttributes([NSBackgroundColorAttributeName: UIColor.strongAddedColor()], range: (newLine as NSString).rangeOfString("enterprise-"))
-        expectedNewLine.addAttributes([NSBackgroundColorAttributeName: UIColor.strongAddedColor()], range: (newLine as NSString).rangeOfString("id1079716387"))
-        expectedNewLine.addAttributes([NSBackgroundColorAttributeName: UIColor.strongAddedColor()], range: (newLine as NSString).rangeOfString("ls=1&"))
+        expectedNewLine.addAttributes([NSBackgroundColorAttributeName: UIColor.strongAddedColor()], range: (newLine as NSString).range(of: "enterprise-"))
+        expectedNewLine.addAttributes([NSBackgroundColorAttributeName: UIColor.strongAddedColor()], range: (newLine as NSString).range(of: "id1079716387"))
+        expectedNewLine.addAttributes([NSBackgroundColorAttributeName: UIColor.strongAddedColor()], range: (newLine as NSString).range(of: "ls=1&"))
 
         let result = jsDiff.diffWords(oldLine, newLine: newLine)
         XCTAssertEqual(result.oldLine, expectedOldLine)
