@@ -253,9 +253,11 @@
 				TargetAttributes = {
 					2380771E1CB94D9600415155 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 					238077271CB94D9700415155 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 					23A4A1531CB93D6500A3DEE3 = {
 						CreatedOnToolsVersion = 7.3;
@@ -415,6 +417,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -431,6 +434,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -444,6 +448,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nerdishbynature.JSDiffTests;
 				PRODUCT_NAME = JSDiffTests;
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 2.3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
 			name = Debug;
@@ -456,6 +461,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nerdishbynature.JSDiffTests;
 				PRODUCT_NAME = JSDiffTests;
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 2.3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
 			name = Release;
