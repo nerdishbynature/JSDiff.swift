@@ -44,12 +44,12 @@ import JavaScriptCore
         results(oldLine, newLine: newLine).map({ JsDiffResult(dict: $0) }).flatMap({ $0 }).forEach { result in
             let characterCount = result.value.count
             if result.removed {
-                attributedOldLine.addAttributes([NSAttributedStringKey.backgroundColor: deletedWordColor], range: NSRange(location: oldLineIndex, length: characterCount))
+                attributedOldLine.addAttributes([.backgroundColor: deletedWordColor], range: NSRange(location: oldLineIndex, length: characterCount))
             } else if result.added {
-                attributedNewLine.addAttributes([NSAttributedStringKey.backgroundColor: addedWordColor], range: NSRange(location: newLineIndex, length: characterCount))
+                attributedNewLine.addAttributes([.backgroundColor: addedWordColor], range: NSRange(location: newLineIndex, length: characterCount))
             } else {
-                attributedOldLine.addAttributes([NSAttributedStringKey.backgroundColor: deletedColor], range: NSRange(location: oldLineIndex, length: characterCount))
-                attributedNewLine.addAttributes([NSAttributedStringKey.backgroundColor: addedColor], range: NSRange(location: newLineIndex, length: characterCount))
+                attributedOldLine.addAttributes([.backgroundColor: deletedColor], range: NSRange(location: oldLineIndex, length: characterCount))
+                attributedNewLine.addAttributes([.backgroundColor: addedColor], range: NSRange(location: newLineIndex, length: characterCount))
             }
 
             if result.removed {
