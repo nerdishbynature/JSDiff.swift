@@ -2,8 +2,8 @@ import UIKit
 import JavaScriptCore
 
 @objc open class JSLineDiff: NSObject {
-    open let newLine: NSAttributedString
-    open let oldLine: NSAttributedString
+    @objc open let newLine: NSAttributedString
+    @objc open let oldLine: NSAttributedString
 
     init(oldLine: NSAttributedString, newLine: NSAttributedString) {
         self.oldLine = oldLine
@@ -12,10 +12,10 @@ import JavaScriptCore
 }
 
 @objc open class JSDiff: NSObject {
-    let deletedColor: UIColor
-    let deletedWordColor: UIColor
-    let addedColor: UIColor
-    let addedWordColor: UIColor
+    @objc let deletedColor: UIColor
+    @objc let deletedWordColor: UIColor
+    @objc let addedColor: UIColor
+    @objc let addedWordColor: UIColor
     fileprivate lazy var context: JSContext = {
         let context = JSContext()
         if let path = Bundle(for: type(of: self)).path(forResource: "bundle", ofType: "js"), let source = try? String(contentsOfFile: path) {
@@ -24,7 +24,7 @@ import JavaScriptCore
         return context!
     }()
 
-    public init(deletedColor: UIColor, deletedWordColor: UIColor, addedColor: UIColor, addedWordColor: UIColor) {
+    @objc public init(deletedColor: UIColor, deletedWordColor: UIColor, addedColor: UIColor, addedWordColor: UIColor) {
         self.deletedColor = deletedColor
         self.deletedWordColor = deletedWordColor
         self.addedColor = addedColor
@@ -42,14 +42,14 @@ import JavaScriptCore
         let attributedOldLine = NSMutableAttributedString(string: oldLine)
         let attributedNewLine = NSMutableAttributedString(string: newLine)
         results(oldLine, newLine: newLine).map({ JsDiffResult(dict: $0) }).flatMap({ $0 }).forEach { result in
-            let characterCount = result.value.characters.count
+            let characterCount = result.value.count
             if result.removed {
-                attributedOldLine.addAttributes([NSBackgroundColorAttributeName: deletedWordColor], range: NSRange(location: oldLineIndex, length: characterCount))
+                attributedOldLine.addAttributes([.backgroundColor: deletedWordColor], range: NSRange(location: oldLineIndex, length: characterCount))
             } else if result.added {
-                attributedNewLine.addAttributes([NSBackgroundColorAttributeName: addedWordColor], range: NSRange(location: newLineIndex, length: characterCount))
+                attributedNewLine.addAttributes([.backgroundColor: addedWordColor], range: NSRange(location: newLineIndex, length: characterCount))
             } else {
-                attributedOldLine.addAttributes([NSBackgroundColorAttributeName: deletedColor], range: NSRange(location: oldLineIndex, length: characterCount))
-                attributedNewLine.addAttributes([NSBackgroundColorAttributeName: addedColor], range: NSRange(location: newLineIndex, length: characterCount))
+                attributedOldLine.addAttributes([.backgroundColor: deletedColor], range: NSRange(location: oldLineIndex, length: characterCount))
+                attributedNewLine.addAttributes([.backgroundColor: addedColor], range: NSRange(location: newLineIndex, length: characterCount))
             }
 
             if result.removed {
