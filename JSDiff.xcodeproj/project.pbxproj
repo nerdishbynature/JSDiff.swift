@@ -171,7 +171,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 238077301CB94D9700415155 /* Build configuration list for PBXNativeTarget "JSDiff-tvOS" */;
 			buildPhases = (
-				238077771CB955D800415155 /* browserify */,
 				2380771A1CB94D9600415155 /* Sources */,
 				2380771B1CB94D9600415155 /* Frameworks */,
 				2380771C1CB94D9600415155 /* Headers */,
@@ -208,7 +207,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23A4A1681CB93D6500A3DEE3 /* Build configuration list for PBXNativeTarget "JSDiff" */;
 			buildPhases = (
-				23A4A1741CB93FD000A3DEE3 /* browserify */,
 				23A4A14F1CB93D6500A3DEE3 /* Sources */,
 				23A4A1501CB93D6500A3DEE3 /* Frameworks */,
 				23A4A1511CB93D6500A3DEE3 /* Headers */,
@@ -319,37 +317,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		238077771CB955D800415155 /* browserify */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = browserify;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "browserify ${SRCROOT}/js/main.js -o ${SRCROOT}/JSDiff/bundle.js";
-		};
-		23A4A1741CB93FD000A3DEE3 /* browserify */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = browserify;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "browserify js/main.js -o ${SRCROOT}/JSDiff/bundle.js";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2380771A1CB94D9600415155 /* Sources */ = {
